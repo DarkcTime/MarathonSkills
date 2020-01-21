@@ -11,7 +11,7 @@ namespace MarathonSkills.ViewModel.HelperViewModel
 
     public delegate void SetPageDelegate(Page page);
 
-    class HelperClassViewModel
+    class HelperClassViewModel : ViewModelProp
     {
 
         public static SetPageDelegate setPage { get; set; }

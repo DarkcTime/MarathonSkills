@@ -4,6 +4,57 @@
              xmlns:local="clr-namespace:MarathonSkills"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="Standart">
+            <Setter Property="TextBlock.FontFamily" Value="Arial"></Setter>
+            <Setter Property="TextBlock.VerticalAlignment" Value="Center"  ></Setter>
+            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"  ></Setter>
+
+            <Setter Property="TextBlock.FontSize" Value="12"/>
+        </Style>
+
+        <Style  TargetType="TextBlock" BasedOn="{StaticResource Standart}">
+            <Setter Property="Foreground" Value="#FFACACAC"></Setter>
+            <Setter Property="FontSize" Value="14" ></Setter>
+
+        </Style>
+
+        <Style x:Key="StyleTextBlockTip" TargetType="TextBlock" BasedOn="{StaticResource Standart}">
+
+            <Setter Property="FontSize" Value="12" ></Setter>
+
+        </Style>
+
+        <Style TargetType="Label" BasedOn="{StaticResource Standart}">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource Standart}" x:Key="StyleButton">
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#FFE0A9AF"></Setter>
+
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource Standart}" x:Key="StyleButtonWidth">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="#FFE0A9AF"></Setter>
+        </Style>
+
+        <Style x:Key="StyleGroupBoxText" TargetType="GroupBox" BasedOn="{StaticResource Standart}">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="200"/>
+        </Style>
+
+        <Style x:Key="StyleTextBox" TargetType="TextBox" BasedOn="{StaticResource Standart}">
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Width"  Value="180"></Setter>
+            <Setter Property="Background" Value="#FFFFFCD6"></Setter>
+        </Style>
+
+
     </Application.Resources>
 </Application>

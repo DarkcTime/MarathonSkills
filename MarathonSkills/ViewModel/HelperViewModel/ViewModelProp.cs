@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MarathonSkills.ViewModel.HelperViewModel
 {
-    class ViewModelProp
+    class ViewModelProp : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

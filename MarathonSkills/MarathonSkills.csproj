@@ -59,6 +59,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\DateTimeMarathon.cs" />
     <Compile Include="ViewModel\HelperViewModel\Command.cs" />
     <Compile Include="ViewModel\HelperViewModel\HelperClassViewModel.cs" />
     <Compile Include="ViewModel\HelperViewModel\ViewModelProp.cs" />

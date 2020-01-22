@@ -21,7 +21,17 @@ namespace MarathonSkills.View.MainWindowSystem
     {
         public WMainWindowSystem()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                ViewModel.MainWinodowSystemViewModel.MainWindowSystemViewModel.CloseWindow = new Action(() => this.Close()); 
+                DataContext = new ViewModel.MainWinodowSystemViewModel.MainWindowSystemViewModel(); 
+            }
+            catch (Exception ex)
+            {
+                ViewModel.HelperViewModel.HelperClassViewModel.MessageBoxErrorStatic(ex);
+            }
+            
         }
     }
 }

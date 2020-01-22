@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace MarathonSkills.ViewModel.HelperViewModel
 {
-    class Command
+    class Command : ICommand
     {
         public event EventHandler CanExecuteChanged
         {

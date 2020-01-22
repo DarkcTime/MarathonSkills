@@ -4,12 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonSkills.View.MainWindowSystem"
-        mc:Ignorable="d"
-        Title="Marathon Skills 2016" Height="500" Width="700" >
+        mc:Ignorable="d" MinHeight="500" MinWidth="700"
+        Title="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}" Height="500" Width="700" >
     <Grid>
-        <Frame Content="{Binding MainFrame , UpdateSourceTrigger=PropertyChanged}">
-            
+        <Frame NavigationUIVisibility="Hidden" Content="{Binding Path=CurrentPage , UpdateSourceTrigger=PropertyChanged}">
+
         </Frame>
-        
     </Grid>
 </Window>

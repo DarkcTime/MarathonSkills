@@ -11,14 +11,22 @@ namespace MarathonSkills.ViewModel.HelperViewModel
 
     public delegate void SetPageDelegate(Page page);
 
+
     class HelperClassViewModel : ViewModelProp
     {
 
         public static SetPageDelegate setPage { get; set; }
 
+        public static SetPageDelegate setPageSecondPage { get; set; }
+
         public static void SetPage(Page page)
         {
             setPage?.Invoke(page);
+        }
+
+        public static void SetPageSecondPage(Page page)
+        {
+            setPageSecondPage?.Invoke(page);
         }
 
         public static void MessageBoxErrorStatic(Exception ex)

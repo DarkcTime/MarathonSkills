@@ -22,7 +22,7 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
 
         DispatcherTimer dispatcherTimer;
 
-
+        public static int NumberClickButton { get; set; }
 
         public ICommand RunnerCommand { get; set; }
         public ICommand SponsorCommand { get; set; }
@@ -30,13 +30,11 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
         public ICommand LoginCommand { get; set; }
 
 
-
         public FirstPageViewModel()
         {
 
             try
             {
-
 
                 RunnerCommand = new Command(CommandRunnerClick);
                 this.SponsorCommand = new Command(CommandSponsorClick);
@@ -80,24 +78,36 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
 
         #region Обработчики кнопок
 
+        private void GoSecondPage()
+        {
+            dispatcherTimer.Stop(); 
+            ViewModel.HelperViewModel.HelperClassViewModel.SetPage(new View.MainPages.SecondPage());
+        }
+
         private void LoginCommandClick(object obj)
         {
-            throw new NotImplementedException();
+
+            NumberClickButton = 1;
+            GoSecondPage();
+          
         }
 
         private void CommandInformationClick(object obj)
         {
-            throw new NotImplementedException();
+            NumberClickButton = 2;
+            GoSecondPage();
         }
 
         private void CommandRunnerClick(object obj)
         {
-            throw new NotImplementedException();
+            NumberClickButton = 3;
+            GoSecondPage();
         }
 
         private void CommandSponsorClick(object obj)
         {
-            throw new NotImplementedException();
+            NumberClickButton = 4;
+            GoSecondPage();
         }
 
         #endregion

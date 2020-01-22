@@ -16,22 +16,13 @@ using System.Windows.Shapes;
 namespace MarathonSkills.View.MainPages
 {
     /// <summary>
-    /// Логика взаимодействия для SecondPage.xaml
+    /// Логика взаимодействия для LoginPage.xaml
     /// </summary>
-    public partial class SecondPage : Page
+    public partial class LoginPage : Page
     {
-        public SecondPage()
+        public LoginPage()
         {
-            try
-            {
-                InitializeComponent();
-                DataContext = new ViewModel.MainPagesViewModel.SecondPageViewModel(); 
-            }
-            catch (Exception ex)
-            {
-                ViewModel.HelperViewModel.HelperClassViewModel.MessageBoxErrorStatic(ex);
-            }
-            
+            InitializeComponent();
         }
     }
 }

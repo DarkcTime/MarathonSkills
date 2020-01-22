@@ -6,14 +6,16 @@
       xmlns:local="clr-namespace:MarathonSkills.View.MainPages"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
-      Title="SecondPage">
-
+      Title="{Binding Path=TitlePage , UpdateSourceTrigger=PropertyChanged}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.15*"/>
             <RowDefinition/>
             <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
+        <Frame Grid.Row="1" Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}" >
+            
+        </Frame>
         <Grid Background="#FF505050">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>

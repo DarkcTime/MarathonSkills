@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MarathonSkills.View.MainPages"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
-      Title="FirstPage">
+      Title="Marathon Skills 2020">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>

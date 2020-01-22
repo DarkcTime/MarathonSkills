@@ -15,10 +15,56 @@ namespace MarathonSkills.ViewModel.MainWinodowSystemViewModel
     {
         public static Action CloseWindow { get; set; }
 
-       public MainWindowSystemViewModel()
+        private string title;
+        public string Title
+        {
+            get => this.title;
+            set => Set<string>(ref title, value);
+        }
+
+        private Page currentPage;
+
+        public Page CurrentPage
+        {
+
+            get => this.currentPage;
+            set => this.Set<Page>(ref this.currentPage, value);
+        }
+
+
+
+        public MainWindowSystemViewModel()
        {
+            try
+            {
+                setPage = SetPages;
+
+                SetPage(new View.MainPages.FirstPage());
+
+            }
+            catch (Exception ex)
+            {
+                this.MessageBoxError(ex);
+            }
 
        }
+
+
+        private void SetPages(Page page)
+        {
+
+            try
+            {
+
+                CurrentPage = page;
+                Title = page.Title;
+            }
+            catch (Exception ex)
+            {
+                this.MessageBoxError(ex);
+            }
+
+        }
 
     }
 }

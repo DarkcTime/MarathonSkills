@@ -5,48 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonSkills.View.MainWindowSystem"
         mc:Ignorable="d"
-        Title="Marathon Skills 2016" Height="500" Width="600" >
+        Title="Marathon Skills 2016" Height="500" Width="700" >
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition/>
-            <RowDefinition Height="0.2*"/>
-        </Grid.RowDefinitions>
-        <Grid Background="#FF505050">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label FontSize="20">MARATHON SKILLS 2020</Label>
-            <TextBlock Grid.Row="1"  TextAlignment="Center" FontStyle="Italic" FontSize="16">
-                 Москва, Россия 
-                <LineBreak/>
-                среда 21 октября 2020</TextBlock>
-        </Grid>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition Height="0.5*"/>
-            </Grid.RowDefinitions>
-
-            <Button Command="{Binding Path=RunnerCommand}" Content="Я хочу стать бегуном" Style="{StaticResource ButtonHigh}"></Button>
-
-            <Button Command="{Binding Path=SponsorCommand}"  Grid.Row="1" Style="{StaticResource ButtonHigh}" Content="Я хочу стать спонсором бегуна" ></Button>
-            <Button Command="{Binding Path=InformationCommand}" Grid.Row="2" Style="{StaticResource ButtonHigh}" Content="Я хочу больше узнать о событии" ></Button>
-            <Grid Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Command="{Binding Path=LoginCommand}" Grid.Row="3" Style="{StaticResource ButtonSmall}" Grid.Column="1">Войти</Button>
-            </Grid>
+        <Frame Content="{Binding MainFrame , UpdateSourceTrigger=PropertyChanged}">
             
-        </Grid>
-        <Grid Background="#FF505050" Grid.Row="2">
-            <TextBlock Text="{Binding Path=TimeBeforeStart , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
-        </Grid>
-
+        </Frame>
+        
     </Grid>
 </Window>

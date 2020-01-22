@@ -63,7 +63,15 @@
     <Compile Include="ViewModel\HelperViewModel\Command.cs" />
     <Compile Include="ViewModel\HelperViewModel\HelperClassViewModel.cs" />
     <Compile Include="ViewModel\HelperViewModel\ViewModelProp.cs" />
+    <Compile Include="ViewModel\MainPagesViewModel\FirstPageViewModel.cs" />
+    <Compile Include="ViewModel\MainPagesViewModel\SecondPageViewModel.cs" />
     <Compile Include="ViewModel\MainWinodowSystemViewModel\MainWindowSystemViewModel.cs" />
+    <Compile Include="View\MainPages\FirstPage.xaml.cs">
+      <DependentUpon>FirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPages\SecondPage.xaml.cs">
+      <DependentUpon>SecondPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainWindowSystem\WMainWindowSystem.xaml.cs">
       <DependentUpon>WMainWindowSystem.xaml</DependentUpon>
     </Compile>
@@ -99,6 +107,14 @@
     <Folder Include="Resourse\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\MainPages\FirstPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPages\SecondPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindowSystem\WMainWindowSystem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91ca9954b72e407d9448454805f70235" Name="Diagram1">
+        <EntityTypeShape EntityType="user25Model.Charity" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Country" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Event" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.EventType" Width="1.5" PointX="3" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Gender" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.GenderStaff" Width="1.5" PointX="9.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Marathon" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Position" Width="1.5" PointX="9.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.RaceKitOption" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Registration" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.RegistrationEvent" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.RegistrationStatus" Width="1.5" PointX="3" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Role" Width="1.5" PointX="1.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Runner" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Sponsorship" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Staff" Width="1.5" PointX="12" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Timesheet" Width="1.5" PointX="14.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.User" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user25Model.Volunteer" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="user25Model.FK__Registrat__Chari__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Marathon__Countr__4A8310C6" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Runner__CountryC__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Volunteer__Count__40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Event__EventType__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Event__MarathonI__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Registrat__Event__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Runner__Gender__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Volunteer__Gende__40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK_Staff_GenderStaff" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK_Staff_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Registrat__RaceK__43D61337" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Registrat__Regis__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Registrat__Regis__489AC854" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Registrat__Runne__42E1EEFE" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Sponsorsh__Regis__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__User__RoleId__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK__Runner__Email__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="user25Model.FK_Timesheet_Staff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

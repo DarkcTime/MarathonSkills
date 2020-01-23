@@ -15,41 +15,49 @@ namespace MarathonSkills.ViewModel.MainWinodowSystemViewModel
     {
         public static Action CloseWindow { get; set; }
 
-        private string timeBeforeStart;
-        
-        public string TimeBeforeStart
+        private string title;
+        public string Title
         {
-            get => this.timeBeforeStart;
-            set => Set<string>(ref this.timeBeforeStart , value); 
+            get => this.title;
+            set => Set<string>(ref title, value);
         }
 
-        DispatcherTimer dispatcherTimer;
+        private Page currentPage;
 
-   
+        public Page CurrentPage
+        {
 
-        public ICommand RunnerCommand { get; set; }
-        public ICommand SponsorCommand { get; set; }
-        public ICommand InformationCommand { get; set; }
-        public ICommand LoginCommand { get; set; }
+            get => this.currentPage;
+            set => this.Set<Page>(ref this.currentPage, value);
+        }
+
+
 
         public MainWindowSystemViewModel()
+       {
+            try
+            {
+                setPage = SetPages;
+
+                SetPage(new View.MainPages.FirstPage());
+
+            }
+            catch (Exception ex)
+            {
+                this.MessageBoxError(ex);
+            }
+
+       }
+
+
+        private void SetPages(Page page)
         {
 
             try
             {
-                Classes.DateTimeMarathon dateTimeMarathon = new Classes.DateTimeMarathon();
-                this.TimeBeforeStart = dateTimeMarathon.GetDateTimeBeforeMarathone();
 
-
-                RunnerCommand = new Command(CommandRunnerClick);
-                this.SponsorCommand = new Command(CommandSponsorClick);
-                this.InformationCommand = new Command(CommandInformationClick);
-                this.LoginCommand = new Command(LoginCommandClick);
-
-                dispatcherTimer = new DispatcherTimer();
-                dispatcherTimer.Interval = new TimeSpan(0,0,1);
-                dispatcherTimer.Tick += timerTick;
-                dispatcherTimer.Start(); 
+                CurrentPage = page;
+                Title = page.Title;
             }
             catch (Exception ex)
             {
@@ -58,44 +66,5 @@ namespace MarathonSkills.ViewModel.MainWinodowSystemViewModel
 
         }
 
-        private void timerTick(object sender, EventArgs e)
-        {
-            try
-            {
-                Classes.DateTimeMarathon dateTimeMarathon = new Classes.DateTimeMarathon();
-                this.TimeBeforeStart = dateTimeMarathon.GetDateTimeBeforeMarathone();
-            }
-            catch (Exception ex)
-            {
-                this.MessageBoxError(ex);
-            }
-        }
-
-        
-
-
-        #region Обработчики кнопок
-
-        private void LoginCommandClick(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CommandInformationClick(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CommandRunnerClick(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CommandSponsorClick(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
     }
 }

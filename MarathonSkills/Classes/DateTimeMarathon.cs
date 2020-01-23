@@ -20,5 +20,8 @@ namespace MarathonSkills.Classes
             string seconds = dateTimeBeforeMarathone.ToString("ss"); 
             return $"{daysBeforeMaraton} дней {hoursBeforeMaraton} часов и {minutesBeforeMaraton} минут до старта марафона!";
         }
+
+
+
     }
 }

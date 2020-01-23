@@ -87,26 +87,26 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
         private void LoginCommandClick(object obj)
         {
 
-            NumberClickButton = 1;
+            NumberClickButton = 4;
             GoSecondPage();
           
         }
 
         private void CommandInformationClick(object obj)
         {
-            NumberClickButton = 2;
+            NumberClickButton = 3;
             GoSecondPage();
         }
 
         private void CommandRunnerClick(object obj)
         {
-            NumberClickButton = 3;
+            NumberClickButton = 1;
             GoSecondPage();
         }
 
         private void CommandSponsorClick(object obj)
         {
-            NumberClickButton = 4;
+            NumberClickButton = 2;
             GoSecondPage();
         }
 

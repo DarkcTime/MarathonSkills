@@ -61,8 +61,20 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
                 this.BackCommand = new Command(BackCommandClick);
 
                 setPageSecondPage = SetPages;
-   
-                
+
+                switch (ViewModel.MainPagesViewModel.FirstPageViewModel.NumberClickButton)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        SetPageSecondPage(new View.SponsorPages.SponsorRunnerPage()); 
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break; 
+                }
+
                 
             }
             catch (Exception ex)
@@ -110,7 +122,14 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
 
         private void BackCommandClick(object obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ViewModel.MainWinodowSystemViewModel.MainWindowSystemViewModel.SetPage(new View.MainPages.FirstPage()); 
+            }
+            catch (Exception ex)
+            {
+                this.MessageBoxError(ex); 
+            }
         }
 
         #endregion 

@@ -28,7 +28,7 @@
                 MARATHON SKILLS 2020
             </TextBlock>
         </Grid>
-        <Frame Grid.Row="1" Margin="3">
+        <Frame Grid.Row="1" Margin="3" Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}">
 
         </Frame>
         <Grid Grid.Row="2" Background="#FF505050">

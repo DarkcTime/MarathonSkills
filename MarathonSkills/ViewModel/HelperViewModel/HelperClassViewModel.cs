@@ -29,6 +29,9 @@ namespace MarathonSkills.ViewModel.HelperViewModel
             setPageSecondPage?.Invoke(page);
         }
 
+
+        protected Model.user25Entities context = new Model.user25Entities(); 
+
         public static void MessageBoxErrorStatic(Exception ex)
         {
             MessageBox.Show(ex.Message, ex.HelpLink, MessageBoxButton.OK, MessageBoxImage.Error);
@@ -43,6 +46,11 @@ namespace MarathonSkills.ViewModel.HelperViewModel
         protected void MessageBoxError(string message, string title = "Ошибка")
         {
             MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        protected void MessageBoxWarning(string message, string title = "Проверьте данные")
+        {
+            MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         protected void MessageBoxInformation(string message, string title = "Успешно")

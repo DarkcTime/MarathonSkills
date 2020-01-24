@@ -57,7 +57,7 @@ namespace MarathonSkills.ViewModel.MainWinodowSystemViewModel
             {
 
                 CurrentPage = page;
-                Title = page.Title;
+                Title = $"Marathon Skills 2020 - {page.Title}";
             }
             catch (Exception ex)
             {
@@ -65,6 +65,8 @@ namespace MarathonSkills.ViewModel.MainWinodowSystemViewModel
             }
 
         }
+
+
 
     }
 }

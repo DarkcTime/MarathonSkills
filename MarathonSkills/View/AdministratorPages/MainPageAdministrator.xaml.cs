@@ -13,17 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MarathonSkills.View.MainPages
+namespace MarathonSkills.View.AdministratorPages
 {
     /// <summary>
-    /// Логика взаимодействия для LoginPage.xaml
+    /// Логика взаимодействия для MainPageAdministrator.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class MainPageAdministrator : Page
     {
-        public LoginPage()
+        public MainPageAdministrator()
         {
             InitializeComponent();
-            DataContext = new ViewModel.MainPagesViewModel.LoginPageViewModel(); 
+            DataContext = new ViewModel.AdministratorPagesViewModel.MainPageAdministratorViewModel(); 
         }
     }
 }

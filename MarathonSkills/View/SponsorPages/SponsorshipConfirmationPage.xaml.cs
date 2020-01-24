@@ -13,17 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MarathonSkills.View.MainPages
+namespace MarathonSkills.View.SponsorPages
 {
     /// <summary>
-    /// Логика взаимодействия для LoginPage.xaml
+    /// Логика взаимодействия для SponsorshipConfirmationPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class SponsorshipConfirmationPage : Page
     {
-        public LoginPage()
+        public SponsorshipConfirmationPage()
         {
             InitializeComponent();
-            DataContext = new ViewModel.MainPagesViewModel.LoginPageViewModel(); 
+            DataContext = new ViewModel.SponsorPagesViewModel.SponsorshipConfirmationPageViewModel();
+
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
@@ -38,11 +39,18 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
             set => this.Set<Page>(ref this.currentPage, value);
         }
 
+        private Visibility visibleButtonLogout;
 
+        public Visibility VisibleButtonLogout
+        {
+            get => this.visibleButtonLogout;
+            set => this.Set<Visibility>(ref visibleButtonLogout, value); 
+        }
 
         DispatcherTimer dispatcherTimer;
 
         public ICommand BackCommand { get; set; }
+        public ICommand LogoutCommand { get; set; }
 
         public SecondPageViewModel()
         {
@@ -52,6 +60,8 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
                 Classes.DateTimeMarathon dateTimeMarathon = new Classes.DateTimeMarathon();
                 this.TimeBeforeStart = dateTimeMarathon.GetDateTimeBeforeMarathone();
 
+
+
                 dispatcherTimer = new DispatcherTimer();
                 dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
                 dispatcherTimer.Tick += timerTick;
@@ -59,6 +69,7 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
 
 
                 this.BackCommand = new Command(BackCommandClick);
+                this.LogoutCommand = new Command(LogoutCommandClick);
 
                 setPageSecondPage = SetPages;
 
@@ -70,8 +81,10 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
                         SetPageSecondPage(new View.SponsorPages.SponsorRunnerPage()); 
                         break;
                     case 3:
+                        SetPageSecondPage(new View.MarathonInformation.FindOutMoreInformation());
                         break;
                     case 4:
+                        setPageSecondPage(new View.MainPages.LoginPage()); 
                         break; 
                 }
 
@@ -85,9 +98,17 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
            
         }
 
-
-
-     
+        private void LogoutCommandClick(object obj)
+        {
+            try
+            {
+                SetPageSecondPage(new View.MainPages.LoginPage()); 
+            }
+            catch (Exception ex)
+            {
+                base.MessageBoxError(ex);
+            }
+        }
 
         private void timerTick(object sender, EventArgs e)
         {

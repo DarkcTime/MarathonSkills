@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MarathonSkills.View.MainPages"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
-      Title="{Binding Path=TitlePage , UpdateSourceTrigger=PropertyChanged}">
+      Title="">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.15*"/>
@@ -20,13 +20,25 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="0.2*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Назад" Command="{Binding Path=BackCommand}" Style="{StaticResource ButtonSmall}" Width="80">
+            <Button Content="Назад" Command="{Binding Path=BackCommand}" Template="{StaticResource ButtonTemplate}" Style="{StaticResource ButtonSmall}" Width="80">
 
             </Button>
             <TextBlock Grid.Column="1" FontSize="23" Foreground="White" HorizontalAlignment="Left">
                 MARATHON SKILLS 2020
             </TextBlock>
+            <Button Grid.Column="2"  Visibility="{Binding Path=VisibleButtonLogout,
+                UpdateSourceTrigger=PropertyChanged}" Height="35" 
+                    Command="{Binding Path=LogoutCommand}" Template="{StaticResource ButtonTemplate}" Style="{StaticResource ButtonSmall}" Width="80">
+                <Button.Content>
+                    <TextBlock FontSize="10" Foreground="Black">
+                        Выйти из 
+                        <LineBreak/>
+                        профиля
+                    </TextBlock>
+                </Button.Content>
+            </Button>
         </Grid>
         <Frame Grid.Row="1" Margin="3" Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}">
 

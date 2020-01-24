@@ -144,13 +144,25 @@
     <Compile Include="Model\Volunteer.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AdministratorPagesViewModel\MainPageAdministratorViewModel.cs" />
+    <Compile Include="ViewModel\CoordinatorPages\MainPageCoordinatorViewModel.cs" />
     <Compile Include="ViewModel\HelperViewModel\Command.cs" />
     <Compile Include="ViewModel\HelperViewModel\HelperClassViewModel.cs" />
     <Compile Include="ViewModel\HelperViewModel\ViewModelProp.cs" />
     <Compile Include="ViewModel\MainPagesViewModel\FirstPageViewModel.cs" />
+    <Compile Include="ViewModel\MainPagesViewModel\LoginPageViewModel.cs" />
     <Compile Include="ViewModel\MainPagesViewModel\SecondPageViewModel.cs" />
     <Compile Include="ViewModel\MainWinodowSystemViewModel\MainWindowSystemViewModel.cs" />
+    <Compile Include="ViewModel\MarathonInormationViewModel\FindOutMoreInformationViewModel.cs" />
+    <Compile Include="ViewModel\RunnerPagesViewModel\MainPageRunnerViewModel.cs" />
     <Compile Include="ViewModel\SponsorPagesViewModel\SponsorRunnerPageViewModel.cs" />
+    <Compile Include="ViewModel\SponsorPagesViewModel\SponsorshipConfirmationPageViewModel.cs" />
+    <Compile Include="View\AdministratorPages\MainPageAdministrator.xaml.cs">
+      <DependentUpon>MainPageAdministrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CoordinatorPages\MainPageCoordinator.xaml.cs">
+      <DependentUpon>MainPageCoordinator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPages\FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
@@ -163,8 +175,23 @@
     <Compile Include="View\MainWindowSystem\WMainWindowSystem.xaml.cs">
       <DependentUpon>WMainWindowSystem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MarathonInformation\FindOutMoreInformation.xaml.cs">
+      <DependentUpon>FindOutMoreInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarathonInformation\ListOfCharitiesPage.xaml.cs">
+      <DependentUpon>ListOfCharitiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RunnerPages\MainPageRunner.xaml.cs">
+      <DependentUpon>MainPageRunner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RunnerPages\RegisterAsRunner.xaml.cs">
+      <DependentUpon>RegisterAsRunner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SponsorPages\SponsorRunnerPage.xaml.cs">
       <DependentUpon>SponsorRunnerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SponsorPages\SponsorshipConfirmationPage.xaml.cs">
+      <DependentUpon>SponsorshipConfirmationPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +230,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="View\AdministratorPages\MainPageAdministrator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CoordinatorPages\MainPageCoordinator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPages\FirstPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -219,7 +254,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MarathonInformation\FindOutMoreInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MarathonInformation\ListOfCharitiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RunnerPages\MainPageRunner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RunnerPages\RegisterAsRunner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SponsorPages\SponsorRunnerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SponsorPages\SponsorshipConfirmationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,7 +293,7 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resourse\info.jpg" />
+    <Resource Include="Resourse\info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

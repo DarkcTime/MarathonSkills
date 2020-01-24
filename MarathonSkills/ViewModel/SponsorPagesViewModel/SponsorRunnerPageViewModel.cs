@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MarathonSkills.ViewModel.SponsorPagesViewModel
@@ -11,6 +12,10 @@ namespace MarathonSkills.ViewModel.SponsorPagesViewModel
     class SponsorRunnerPageViewModel : HelperViewModel.HelperClassViewModel
     {
         #region Свойства
+
+        public static int SumDonationStatic { get; set; }
+
+        public static NewRunner SelectedRunnerStatic { get; set; }
 
         private string name, ownerCard, numberCard, mouthEnd, yearEnd, _CVC;
 
@@ -129,8 +134,12 @@ namespace MarathonSkills.ViewModel.SponsorPagesViewModel
         {
             try
             {
-
-                this.CheckingField(); 
+                if (this.CheckingField())
+                {
+                    SumDonationStatic = this.SumDonation;
+                    SelectedRunnerStatic = this.SelectedRunner; 
+                    SetPageSecondPage(new View.SponsorPages.SponsorshipConfirmationPage());
+                }
             }
             catch (Exception ex)
             {
@@ -202,14 +211,15 @@ namespace MarathonSkills.ViewModel.SponsorPagesViewModel
                 return false; 
             }
 
+            MessageBox.Show(CVC);
 
-            if (CVC.Length != 3 || int.TryParse(CVC, out int res))
+            if (CVC.Length < 3 && int.TryParse(CVC, out int res))
             {
                 this.MessageBoxWarning("CVC состоит из 3 чисел");
+                return false;
             }
            
-            
-
+           
 
             return true; 
 

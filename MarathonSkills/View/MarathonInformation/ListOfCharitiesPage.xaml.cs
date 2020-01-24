@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MarathonSkills.View.MainPages
+namespace MarathonSkills.View.MarathonInformation
 {
     /// <summary>
-    /// Логика взаимодействия для LoginPage.xaml
+    /// Логика взаимодействия для ListOfCharitiesPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class ListOfCharitiesPage : Page
     {
-        public LoginPage()
+        public ListOfCharitiesPage()
         {
             InitializeComponent();
-            DataContext = new ViewModel.MainPagesViewModel.LoginPageViewModel(); 
         }
     }
 }

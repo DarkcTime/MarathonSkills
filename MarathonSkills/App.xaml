@@ -15,10 +15,18 @@
         <Style  TargetType="TextBlock" BasedOn="{StaticResource Standart}">
             <Setter Property="Foreground" Value="#FFACACAC"></Setter>
             <Setter Property="FontSize" Value="14" ></Setter>
-
+            <Setter Property="TextAlignment" Value="Center"></Setter>
         </Style>
 
-        
+
+        <Style x:Key="TextBlockButton" TargetType="TextBlock" BasedOn="{StaticResource Standart}">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="14" ></Setter>
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="FontStyle" Value="Italic"></Setter>
+        </Style>
+
+
         <Style x:Key="StyleTextBlockTip" TargetType="TextBlock" BasedOn="{StaticResource Standart}">
 
             <Setter Property="FontSize" Value="12" ></Setter>
@@ -75,13 +83,13 @@
         </Style>
 
         <Style TargetType="Image" x:Key="InfoImage">
-            <Setter Property="Source" Value="/MarathonSkills;component/Resourse/info.jpg"></Setter>
+            <Setter Property="Source" Value="/MarathonSkills;component/Resourse/info.png"></Setter>
             <Setter Property="Height" Value="15"/>
             <Setter Property="Width" Value="20"/>
         </Style>
 
 
-        <Style TargetType="Button"  x:Key="ButtonHigh">
+        <Style TargetType="Button"  x:Key="ButtonHigh" >
             <Setter Property="Height" Value="55"></Setter>
             <Setter Property="Width" Value="300"></Setter>
             <Setter Property="FontSize" Value="16"></Setter>
@@ -92,21 +100,35 @@
             <Setter Property="Width" Value="120"></Setter>
             <Setter Property="FontSize" Value="14"></Setter>
         </Style>
-        
-        <Style x:Key = "ButtonRoundedCorner" TargetType = "Button">
-            <Setter Property = "Background" Value = "#FFB4B4B4" />
-            <Setter Property = "Foreground" Value = "White" />
-            <Setter Property = "Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType = "Button">
-                        <Border CornerRadius = "10" Background = "{TemplateBinding Background}" BorderThickness = "2">
-                            <ContentPresenter HorizontalAlignment = "Center" VerticalAlignment = "Center">
-                            </ContentPresenter>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-                </Setter>
-        </Style>
+
+        <ControlTemplate x:Key="ButtonTemplate"  TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                    <Setter Property="Foreground" Value="#FF838383"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
 
     </Application.Resources>
 </Application>

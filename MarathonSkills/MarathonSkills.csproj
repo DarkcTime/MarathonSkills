@@ -194,6 +194,9 @@
     <Compile Include="View\RunnerPages\RegisterAsRunner.xaml.cs">
       <DependentUpon>RegisterAsRunner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RunnerPages\RegistrationForAnEvent.xaml.cs">
+      <DependentUpon>RegistrationForAnEvent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SponsorPages\SponsorRunnerPage.xaml.cs">
       <DependentUpon>SponsorRunnerPage.xaml</DependentUpon>
     </Compile>
@@ -278,6 +281,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RunnerPages\RegisterAsRunner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RunnerPages\RegistrationForAnEvent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

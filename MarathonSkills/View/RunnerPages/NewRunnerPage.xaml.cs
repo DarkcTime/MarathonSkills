@@ -16,14 +16,14 @@ using System.Windows.Shapes;
 namespace MarathonSkills.View.RunnerPages
 {
     /// <summary>
-    /// Логика взаимодействия для RegisterAsRunner.xaml
+    /// Логика взаимодействия для NewRunnerPage.xaml
     /// </summary>
-    public partial class RegisterAsRunner : Page
+    public partial class NewRunnerPage : Page
     {
-        public RegisterAsRunner()
+        public NewRunnerPage()
         {
             InitializeComponent();
-            DataContext = new ViewModel.RunnerPagesViewModel.RegisterAsRunnerViewModel(); 
+            DataContext = new ViewModel.RunnerPagesViewModel.NewRunnerPageViewModel(); 
         }
     }
 }

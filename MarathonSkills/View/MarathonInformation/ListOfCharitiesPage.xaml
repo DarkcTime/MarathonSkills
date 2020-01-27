@@ -8,6 +8,20 @@
       d:DesignHeight="375" d:DesignWidth="700"
       Title="ListOfCharitiesPage">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label>Список благотворительных организаций</Label>
+        <TextBlock Grid.Row="1">
+            Это - список всех благотворительных учреждений, которые поддерживаются в 
+            <LineBreak/>
+            Marathon Skills 2016. Спасибо за помощь вы поддерживаете их, спонсируя
+            <LineBreak/>
+            бегунов
+        </TextBlock>
+        
         
     </Grid>
 </Page>

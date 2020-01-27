@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\user\Desktop\vladik\MarathonSkills-BackBranch\MarathonSkills\Model\DataModel.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Task\MarathonSkills-BranchOnePC\MarathonSkills\Model\DataModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

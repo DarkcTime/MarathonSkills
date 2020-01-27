@@ -76,6 +76,7 @@ namespace MarathonSkills.ViewModel.MainPagesViewModel
                 switch (ViewModel.MainPagesViewModel.FirstPageViewModel.NumberClickButton)
                 {
                     case 1:
+                        SetPageSecondPage(new View.RunnerPages.RegisterAsRunner());
                         break;
                     case 2:
                         SetPageSecondPage(new View.SponsorPages.SponsorRunnerPage()); 
